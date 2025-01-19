@@ -6,6 +6,7 @@ import { GlobeDemo } from './GridGlobe';
 import { useState } from 'react';
 import MagicButton from './MagicButton';
 import { IoCopyOutline } from 'react-icons/io5';
+import Link from 'next/link';
 // import animationData from '@/data/confetti.json'
 export const BentoGrid = ({
   className,
@@ -108,21 +109,48 @@ export const BentoGridItem = ({
         {id===2 && <GlobeDemo/>}
 
         {id===3 && (
-          <div className="flex gap-1 lg:gap-5 w-fit -right-3 lg:-right-2 absolute top-0 left-0 ">
+          <div className="flex gap-1 lg:gap-5 w-fit -right-3 lg:-right-2 absolute">
             <div className='flex flex-col gap-3 lg:gap-8'>
-              {['React.js' , 'Next.js', 'TypeScript'].map((item) => (
-                <span key={item} className='py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opac50* lg:opacity-100 rounded-lg text-center'>{item}</span>
+              {[
+                {
+                title: 'React.js',                
+                href:'https://fr.react.dev/'
+              },
+                {
+                title: 'Next.js',                
+                href:'https://nextjs.org/'
+              },
+                {
+                title: 'JavaScript',                
+                href:'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+              },
+            ].map((item,idx) => (
+                <Link href={item.href} target='_blank' key={idx} className='py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opac50* lg:opacity-100 rounded-lg text-center bg-[#10132E]/30 hover:bg-[#262c61] transition-all hover:scale-105 duration-200 hover:cursor-pointer'>{item.title}</Link>
               ))}
               <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]"/>
               
             </div>
             <div className='flex flex-col gap-3 lg:gap-8'>
               <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]"/>
-              {['MongoDB' , 'Vue.Js', 'MySQL'].map((item) => (
-                <span key={item} className='py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opac50* lg:opacity-100 rounded-lg text-center'>{item}</span>
+              {[
+                {
+                title: 'MongoDB',                
+                href:'https://fr.react.dev/'
+              },
+                {
+                title: 'MySQL',                
+                href:'https://nextjs.org/'
+              },
+                {
+                title: 'Node.Js',                
+                href:'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+              },
+            ].map((item,idx) => (
+                <Link href={item.href} target='_blank' key={idx} className='py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opac50* lg:opacity-100 rounded-lg text-center bg-[#10132E]/30 hover:bg-[#262c61] transition-all hover:scale-105 duration-200 hover:cursor-pointer'>{item.title}</Link>
               ))}
               
             </div>
+           
             </div>
               
         )}
