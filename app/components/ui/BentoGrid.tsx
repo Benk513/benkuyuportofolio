@@ -8,6 +8,7 @@ import MagicButton from './MagicButton';
 import { IoCopyOutline } from 'react-icons/io5';
 import Link from 'next/link';
 // import animationData from '@/data/confetti.json'
+import { motion } from 'framer-motion';
 export const BentoGrid = ({
   className,
   children,
@@ -52,7 +53,10 @@ export const BentoGridItem = ({
     }
 
   return (
-    <div
+    <motion.div
+    initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
+            transition={{ duration: 0.8, delay:0.4 ,ease:'easeInOut'}}
       className={cn(
         'row-span-1  rounded-3xl overflow-hidden relative group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none dark:bg-transparent dark:border-white/[0.1] bg-white border justify-between flex flex-col space-y-4',
         className
@@ -110,7 +114,8 @@ export const BentoGridItem = ({
 
         {id===3 && (
           <div className="flex gap-1 lg:gap-5 w-fit -right-3 lg:-right-2 absolute">
-            <div className='flex flex-col gap-3 lg:gap-8'>
+            <div 
+            className='flex flex-col gap-3 lg:gap-8'>
               {[
                 {
                 title: 'React.js',                
@@ -179,6 +184,6 @@ export const BentoGridItem = ({
       </div>
 
        
-    </div> </div>
+    </div> </motion.div>
   );
 };
