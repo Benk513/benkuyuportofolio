@@ -1,4 +1,4 @@
-import { FaHome } from "react-icons/fa";
+import { FaFile, FaPhone, FaToolbox, FaUser } from "react-icons/fa";
 import Hero from "./components/Hero";
 import { FloatingNav } from "./components/ui/FloatingNav";
 import Grid from "./components/ui/Grid";
@@ -7,6 +7,7 @@ import Clients from "./components/ui/Clients";
 import Studies from "./components/ui/Studies"
 import Footer from "./components/ui/Footer";
 import Stack from "./components/ui/Stack";
+import About from "./components/ui/About";
 export default function Home() {
   return (
    <main className="relative bg-black-100 flex justify-center items-center flex-col  mx-auto sm:px-10 px-5">
@@ -16,31 +17,32 @@ export default function Home() {
         {
           name: "About",
           link: "#about",
-          
+          icon:<FaUser/>
 
         },
         {
           name: "Projects",
           link: "#projects",
-          icon:<FaHome/>
+          icon:<FaToolbox/>
 
         },
         {
           name: "Education",
           link: "#education",
-          icon:<FaHome/>
+          icon:<FaFile/>
 
         },
         {
           name: "Contact",
           link: "#contact",
-          icon:<FaHome/>
+          icon:<FaPhone/>
 
         }
       ]
       }
       />
        <Hero/>
+       <About/>
        <Grid/>
        <Stack/>
        <RecentProjects/>

@@ -37,7 +37,7 @@ export const BentoGridItem = ({
   spareImg,
 }: {
   className?: string;
-  title?: string | React.ReactNode;
+  title?: string;
   description?: string | React.ReactNode;
   id?: number;
   img?: string;

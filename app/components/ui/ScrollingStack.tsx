@@ -6,7 +6,7 @@ import React, {useEffect, useState } from "react";
 export const ScrollingStack = ({
   items,
   direction = "left",
-  speed = "fast",
+  speed = "normal",
   pauseOnHover = false,
   className,
 }: {
@@ -23,7 +23,7 @@ export const ScrollingStack = ({
 
   useEffect(() => {
     addAnimation();
-  }, []);
+  });
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {

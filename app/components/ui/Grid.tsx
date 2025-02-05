@@ -4,8 +4,8 @@ import { gridItems } from '@/data'
 
 const Grid = () => {
   return (
-    <section id="about">
-        <BentoGrid className='w-fulll   text-white'>
+    <section className=' py-24 lg:py-40' id="about">
+         <BentoGrid className='w-fulll   text-white'>
             {gridItems.map((item,idx) =>(
                 <BentoGridItem 
                 id={item.id}
@@ -20,7 +20,7 @@ const Grid = () => {
                 />
             ))}
 
-        </BentoGrid>
+        </BentoGrid >
     </section>
   )
 }

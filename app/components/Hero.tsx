@@ -3,7 +3,7 @@ import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa'
+import {FaLocationArrow } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 const Hero = () => {
   return (
@@ -21,9 +21,9 @@ const Hero = () => {
       <div className='flex justify-center relative my-20 z-10'>
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center '>
             <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay:0.4}}
+            initial={{ opacity: 0,y:20 }}
+            whileInView={{ opacity: 1,y:0 }}
+            transition={{ duration: 0.8, delay:0.4,ease:'easeInOut'}}
 
              className=" uppercase tracking-widest text-xs  text-center text-blue-100 max-w-80  dark:text-blue-100">
  Dynamic Web Magic with Next.js                
@@ -34,6 +34,7 @@ const Hero = () => {
             />
 
             <p className=' text-white text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>Hi, I&apos;m Ben Kuyu, a React Developer based in Tunisia.</p>
+          <div className='flex max-20 space-x-4 justify-between items-center'>
 
             <a href="#projects">
                 <MagicButton 
@@ -41,6 +42,12 @@ const Hero = () => {
                 position='right'
                 icon={<FaLocationArrow/>}/>
             </a>
+
+            <a href="">file</a> 
+
+            
+           
+                </div>
         </div>
       </div>
        

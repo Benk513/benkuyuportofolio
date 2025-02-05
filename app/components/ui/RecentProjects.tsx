@@ -3,7 +3,6 @@ import { projects } from '@/data';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
-import Image from 'next/image';
 
 const RecentProjects = () => {
   return (
@@ -22,7 +21,10 @@ const RecentProjects = () => {
       </h1>
       <div className='items-center justify-center p-4 gap-16 space-y-4 lg:space-y-8 mt-10 '>
         {projects.map((project) => (
-          <div
+          <motion.div
+          initial={{ opacity: 0 ,scale:0.9 , y:-50}}
+          whileInView={{ opacity: 1 ,scale:1,y:0}}
+          transition={{delay:0.3 ,duration:0.5,ease:'easeInOut'}}
             key={project.id}
             className='lg:min-h-[38rem] min-h-[12rem] rounded-[25px] overflow-hidden lg:flex   justify-around items-center
              text-purple  leading-9  relative p-4 bg-gradient-to-r gap-y-4   from-[#030723] to-[#0c0e23] border border-[#2b2c3a] '
@@ -79,16 +81,15 @@ const RecentProjects = () => {
               <motion.img
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 1 }}
+                transition={{ delay: 1, duration: 1 }}
                 alt='ben kuyu recent project'
                 className=' w-[900px] -right-0 top-0 absolute'
                 src='/bg.png'
               />
               <a href={project.link} target='_blank'>
 
-              <Image
-                width={1000}
-                height={700}
+              <img
+                
                 className='lg:w-[40rem] w-[30rem] h-[17rem] lg:h-[20rem] left-[40.28px] lg:left-[46.28px] top-0 lg:top-[96px] absolute origin-top-left lg:scale-[120%] object-contain  rotate-[2.80deg] rounded-[10px] hover:cursor-pointer lg:hover:scale-125 transition-all duration-500'
                 src={project.img}
                 
@@ -96,7 +97,7 @@ const RecentProjects = () => {
                 />
                 </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

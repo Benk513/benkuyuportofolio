@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ben KUYU | Portofolio",
-  description: "My modern minimalistic website ",
+  description: "I am Ben KUYU, a passionate and detail-oriented Frontend Developer specializing in React.js Ecosystem. I thrive on building intuitive, responsive, and visually appealing web applications that deliver seamless user experiences. With a strong foundation in modern JavaScript, HTML, and CSS, I bring ideas to life through clean, maintainable, and scalable code.",
 };
 
 export default function RootLayout({

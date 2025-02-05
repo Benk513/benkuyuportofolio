@@ -7,7 +7,7 @@ import { stacks } from '@/data'
 
 const Stack = () => {
   return (
-    <div className='mx-auto max-w-2xl py-20'>
+    <div className='mx-auto max-w-2xl py-24'>
 
         <ScrollingStack  items={stacks}/>
     </div>
